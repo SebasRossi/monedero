@@ -13,8 +13,6 @@ setup(
     version="0.2",
     author="Sebi",
     author_email="the@sebastardo.com",
-    install_requires=requirements,
-    extras_require={'dev': requirements_dev},
     packages=['monedero'],
     license='MIT',
     entry_points={
@@ -22,4 +20,6 @@ setup(
             'monedero = monedero.__main__:main' 
         ]
     },
+    install_requires=requirements,
+    extras_require={'dev': requirements_dev},
 )

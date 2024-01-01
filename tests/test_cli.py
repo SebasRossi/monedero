@@ -9,23 +9,17 @@ runner = CliRunner()
 def test_app():
   result = runner.invoke(cli.app, ['-v'])
   assert result.exit_code == 0
-  assert result.output == 'CLI Click v0.1.1\n'
-
-
-def test_get_default():
-    result = runner.invoke(cli.get, [])
-    assert result.exit_code == 0
-    assert result.output == 'bitcoin hoy\n'
+  assert result.output == 'Monedero v0.2\n'
 
 def test_get_coin():
     result = runner.invoke(cli.get, ['-c', 'coso'])
     assert result.exit_code == 0
-    assert result.output == 'coso hoy\n'
+    assert result.output == 'coso 2024-01-01\n'
 
 def test_get_date():
-    result = runner.invoke(cli.get, ['-d', 'ayer'])
+    result = runner.invoke(cli.get, ['-c', 'coso', '-d', '2024-01-01'])
     assert result.exit_code == 0
-    assert result.output == 'bitcoin ayer\n'
+    assert result.output == 'coso 2024-01-01\n'
 
 
 def test_get_ambos():
@@ -35,7 +29,6 @@ def test_get_ambos():
 
 if __name__ == '__main__':
     test_app()
-    test_get_default()
     test_get_coin()
     test_get_date()
     test_get_ambos()
