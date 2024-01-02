@@ -1,4 +1,4 @@
-from setuptools import setup
+from setuptools import setup, find_packages
 
 with open("requirements.txt") as f:
     requirements = f.read().splitlines()
@@ -14,6 +14,8 @@ setup(
     author="Sebi",
     author_email="the@sebastardo.com",
     packages=['monedero'],
+    #packages=['monedero', 'monedero.functions'],
+    #packages=find_packages(),
     license='MIT',
     entry_points={
         'console_scripts': [

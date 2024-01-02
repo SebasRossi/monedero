@@ -16,6 +16,7 @@ def test_get_coin():
     assert result.exit_code == 0
     assert result.output == 'coso 2024-01-01\n'
 
+
 def test_get_date():
     result = runner.invoke(cli.get, ['-c', 'coso', '-d', '2024-01-01'])
     assert result.exit_code == 0
