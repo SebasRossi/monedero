@@ -21,7 +21,7 @@ def app(version, author):
 @click.argument("folder")
 def bucket(folder):
     # TODO: 
-    click.echo(environment(path=folder))
+    click.echo(environment(saving_path=folder))
 
 @click.command(help="Get the coins.")
 @click.option('--coin', '-c', required=True, help='Get the a specific coin.')

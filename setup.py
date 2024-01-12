@@ -10,7 +10,7 @@ with open("requirements_dev.txt") as f:
 
 setup(
     name="monedero",
-    version="0.2",
+    version="0.2.2",
     author="Sebi",
     author_email="the@sebastardo.com",
     packages=['monedero'],
@@ -19,7 +19,7 @@ setup(
     license='MIT',
     entry_points={
         'console_scripts': [
-            'monedero = monedero.__main__:main' 
+            'm = monedero.__main__:main' 
         ]
     },
     install_requires=requirements,
